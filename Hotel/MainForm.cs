@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Reflection.Emit;
 
 namespace Hotel
 {
@@ -17,6 +18,14 @@ namespace Hotel
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+            timer1 = new Timer();
+            timer1.Interval = 1000;            
+            timer1.Tick += Timer_Tick;        
+            timer1.Start();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            timeLabel.Text = DateTime.Now.ToString("HH:mm:ss");    
         }
 
         private void guestCardButton_Click(object sender, EventArgs e)

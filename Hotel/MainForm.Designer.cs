@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkingOutButton = new System.Windows.Forms.RadioButton();
@@ -37,7 +38,7 @@
             this.statusHeader = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.PictureBox();
             this.searchTextbox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -54,12 +55,15 @@
             this.roomLabel = new System.Windows.Forms.Label();
             this.dgwGuests = new System.Windows.Forms.DataGridView();
             this.guestsLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchButton)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwGuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,7 +161,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.timeLabel);
             this.panel2.Controls.Add(this.searchButton);
             this.panel2.Controls.Add(this.searchTextbox);
             this.panel2.Location = new System.Drawing.Point(0, -1);
@@ -165,15 +170,15 @@
             this.panel2.Size = new System.Drawing.Size(1289, 67);
             this.panel2.TabIndex = 0;
             // 
-            // label4
+            // timeLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(148, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 21);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Время";
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timeLabel.Location = new System.Drawing.Point(148, 19);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(75, 23);
+            this.timeLabel.TabIndex = 4;
+            this.timeLabel.Text = "Время";
             // 
             // searchButton
             // 
@@ -353,6 +358,19 @@
             this.guestsLabel.TabIndex = 6;
             this.guestsLabel.Text = "Список гостей";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(89, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,6 +392,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwGuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,7 +414,7 @@
         private System.Windows.Forms.RadioButton checkingOutButton;
         private System.Windows.Forms.RadioButton occupiedButton;
         private System.Windows.Forms.RadioButton freeButton;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.TextBox statusTextBox;
@@ -406,6 +425,8 @@
         private System.Windows.Forms.TextBox checkInTextBox;
         private System.Windows.Forms.Label fullNameLabel;
         private System.Windows.Forms.TextBox fullNameTextBox;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
